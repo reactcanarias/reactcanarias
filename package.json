@@ -46,6 +46,17 @@
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": ["yarn type-check && lint-staged"],
+      "pre-push": "yarn run test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["yarn lint:fix", "git add"],
+    "*.scss": ["prettier --write", "stylelint --fix", "git add"],
+    "{*.{json,md}}": ["prettier --write", "git add"]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
