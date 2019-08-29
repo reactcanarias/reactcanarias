@@ -19,8 +19,5 @@ module.exports = {
   testURL: "http://localhost",
   setupFilesAfterEnv: [`<rootDir>/.jest/jest.setup.js`],
   testEnvironment: "node",
-  setupFiles: [
-    "<rootDir>/.jest/loadershim.js",
-    "<rootDir>/.jest/register-context.js",
-  ],
+  setupFiles: ["<rootDir>/.jest/loadershim.js"],
 }
