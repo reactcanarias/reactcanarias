@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    "plugin:jest/recommended",
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended'
   ],
@@ -13,7 +14,6 @@ module.exports = {
     }
   },
   env: {
-    "jest/globals": true,
     browser: true,
     node: true,
     es6: true
