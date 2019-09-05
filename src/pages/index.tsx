@@ -11,7 +11,7 @@ const IndexPage = () => (
     <h1>Hola Reacter !</h1>
     <p>Bienvenido a React Canarias.</p>
     <p>
-      📢 Únete a nuestro :{" "}
+      📢 Únete a nuestro{" "}
       <a href="https://reactjs.eu/slack" target="blank">
         Slack
       </a>
@@ -19,9 +19,16 @@ const IndexPage = () => (
     </p>
 
     <p>
-      💪 Y a nuestro :{" "}
+      💪 A nuestro{" "}
       <a href="https://reactjs.eu/meetup" target="blank">
         Meetup
+      </a>
+      .
+    </p>
+    <p>
+      💻 Y nuestro{" "}
+      <a href="https://reactjs.eu/github" target="blank">
+        Github
       </a>
       .
     </p>
