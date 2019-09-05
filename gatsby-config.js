@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `React Canarias`,
+    description: `Comunidad de Javascript Canaria con Meetups Mensuales. Enfocados a mejorar el ecosistema de React en las Islas Canarias.`,
+    author: `@reactcanarias`,
   },
   plugins: [
     `gatsby-transformer-json`,
