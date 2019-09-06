@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Jorge Marrero",
+    "position": "React Developer",
+    "company": "Woonivers",
+    "github": "jorgemarrero",
+    "twitter": "jorgemro_com"
+  },
+  {
+    "name": "Antonio Sejas",
+    "position": "Software Engineer",
+    "company": "Woonivers",
+    "github": "sejas",
+    "twitter": "antoniosejas"
+  },
+  {
+    "name": "Ulises Santana",
+    "position": "Full Stack Developer",
+    "company": "Kentech",
+    "github": "ulisesantana"
+  }
+]
