@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `contributors`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/contributors`,
       },
     },
     `gatsby-transformer-sharp`,
