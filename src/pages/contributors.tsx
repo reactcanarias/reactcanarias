@@ -4,8 +4,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Img, { FluidObject } from "gatsby-image"
 import SEO from "../components/seo"
+import { Contributor } from "../components/contributor"
 
-interface Contributor {
+export interface Contributor {
   image?: {
     childImageSharp: {
       fluid: FluidObject
@@ -56,26 +57,9 @@ const ContributorsPage = () => {
       <h1>Contributors</h1>
       <p>Thanks so much to these amazing people: </p>
       <div>
-        {contributors.map(contributor => {
-          const {
-            company,
-            github,
-            image,
-            name,
-            twitter,
-            position,
-          } = contributor
-          return (
-            <div key={name}>
-              <h3>{name}</h3>
-              <p>Position: {position}</p>
-              <p>Company: {company}</p>
-              <p>Github: {github}</p>
-              <p>Twitter: {twitter}</p>
-              {image && <Img fluid={image.childImageSharp.fluid}></Img>}
-            </div>
-          )
-        })}
+        {contributors.map(contributor => (
+          <Contributor {...contributor} key={contributor.name} />
+        ))}
       </div>
     </Layout>
   )
