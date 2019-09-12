@@ -2,9 +2,10 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Img, { FluidObject } from "gatsby-image"
+import { FluidObject } from "gatsby-image"
 import SEO from "../components/seo"
 import { Contributor } from "../components/contributor"
+import { Flex } from "rebass"
 
 export interface Contributor {
   image?: {
@@ -56,11 +57,11 @@ const ContributorsPage = () => {
       <SEO title="Home" />
       <h1>Contributors</h1>
       <p>Thanks so much to these amazing people: </p>
-      <div>
+      <Flex>
         {contributors.map(contributor => (
           <Contributor {...contributor} key={contributor.name} />
         ))}
-      </div>
+      </Flex>
     </Layout>
   )
 }
