@@ -8,13 +8,8 @@
 import React, { ReactNode } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Styled } from "theme-ui"
-import emotionNormalize from "emotion-normalize"
-
-import { Global, css } from "@emotion/core"
 
 import Header from "./header"
-//import "./layout.css"
 
 interface LayoutProps {
   children?: ReactNode
@@ -32,12 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   `)
 
   return (
-    <Styled.root>
-      <Global
-        styles={css`
-          ${emotionNormalize}
-        `}
-      ></Global>
+    <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -54,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </Styled.root>
+    </>
   )
 }
 
