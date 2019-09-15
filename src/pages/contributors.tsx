@@ -57,7 +57,7 @@ const ContributorsPage = () => {
       <SEO title="Home" />
       <h1>Contributors</h1>
       <p>Thanks so much to these amazing people: </p>
-      <Flex>
+      <Flex flexWrap="wrap">
         {contributors.map(contributor => (
           <Contributor {...contributor} key={contributor.name} />
         ))}
