@@ -8,7 +8,7 @@ interface SectionProps {
   children?: ReactNode
 }
 
-const Section: React.FC<SectionProps> = ({
+export const Section: React.FC<SectionProps> = ({
   backgroundColor = "#FFF",
   children,
 }) => {
