@@ -1,4 +1,9 @@
-import { configure } from "@storybook/react"
+import React from "react"
+import { configure, addDecorator } from "@storybook/react"
+import { ThemeProvider } from "theme-ui"
+
+import { Root } from "../src/components/root"
+import theme from "../src/gatsby-plugin-theme-ui/index"
 // import { action } from "@storybook/addon-actions"
 
 // automatically import all files ending in *.stories.js
@@ -19,4 +24,11 @@ global.__PATH_PREFIX__ = ""
 // window.___navigate = pathname => {
 //   action("NavigateTo:")(pathname)
 // }
+if (!process.env.JEST_WORKER_ID) {
+  addDecorator(story => (
+    <ThemeProvider theme={theme}>
+      <Root>{story()}</Root>
+    </ThemeProvider>
+  ))
+}
 configure(loadStories, module)
